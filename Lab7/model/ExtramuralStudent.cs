@@ -23,5 +23,7 @@ namespace Lab7
         public override int GetHashCode() => base.GetHashCode();
 
         public override string ToString() => base.ToString();
+
+        public new void ShowInformation() => Console.WriteLine("Extramural Student: { " + this.ToString() + " }");
     }
 }
