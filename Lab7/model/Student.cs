@@ -43,7 +43,7 @@ namespace Lab7
 
         public override int GetHashCode() => HashCode.Combine(Name, Faculty, Course, StudentDepartment);
 
-        public override string ToString() => "Name = " + Name + ", Faculty = " + Faculty + ", Course = " + Course + ", Department" + StudentDepartment;
+        public override string ToString() => "Name = " + Name + ", Faculty = " + Faculty + ", Course = " + Course + ", Department = " + StudentDepartment;
 
         public void ShowInformation() => Console.WriteLine("Student: { " + this.ToString() + " }");
     }

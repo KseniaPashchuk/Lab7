@@ -16,7 +16,8 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            Assert.Pass();
+            string expectedStr = "Name = Vasya Pupkin, Faculty = MMF, Course = 2, Department = Extramural";
+            Assert.AreEqual(expectedStr, student.ToString());
         }
     }
 }
