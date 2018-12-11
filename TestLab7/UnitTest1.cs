@@ -5,7 +5,7 @@ namespace Tests
 {
     public class Tests
     {
-        ExtramuralStudent student;
+        Student student;
 
         [SetUp]
         public void Setup()
@@ -16,8 +16,8 @@ namespace Tests
         [Test]
         public void Test1()
         {
-            string expectedStr = "Name = Vasya Pupkin, Faculty = MMF, Course = 2, Department = Extramural";
-            Assert.AreEqual(expectedStr, student.ToString());
+            string expectedStr = "Extramural Student: { Name = Vasya Pupkin, Faculty = MMF, Course = 2 }";
+            Assert.AreEqual(expectedStr, student.GetInformation());
         }
     }
 }

@@ -4,6 +4,7 @@ namespace Lab7
 {
     interface IApplicant
     {
-        void ShowInformation();
+        String GetInformation();
+        double GetGPA();
     }
 }

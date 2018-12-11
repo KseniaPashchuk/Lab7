@@ -24,6 +24,7 @@ namespace Lab7
 
         public override string ToString() => base.ToString();
 
-        public new void ShowInformation() => Console.WriteLine("Extramural Student: { " + this.ToString() + " }");
+        public override String GetInformation() => "Extramural Student: { " + "Name = " + Name
+            + ", Faculty = " + Faculty + ", Course = " + Course + " }";
     }
 }

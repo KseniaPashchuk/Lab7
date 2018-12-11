@@ -10,6 +10,7 @@ namespace Lab7
         private string faculty;
         private int course;
         private Department studentDepartment;
+        private double gpa;
 
         public enum Department { Extramural, FullTime };
 
@@ -29,6 +30,7 @@ namespace Lab7
         public string Faculty { get => faculty; set => faculty = value; }
         public int Course { get => course; set => course = value; }
         private Department StudentDepartment { get => studentDepartment; set => studentDepartment = value; }
+        public double GPA { get => gpa; set => gpa = value; }
 
         public override bool Equals(object obj)
         {
@@ -43,8 +45,11 @@ namespace Lab7
 
         public override int GetHashCode() => HashCode.Combine(Name, Faculty, Course, StudentDepartment);
 
-        public override string ToString() => "Name = " + Name + ", Faculty = " + Faculty + ", Course = " + Course + ", Department = " + StudentDepartment;
+        public override string ToString() => base.ToString();
 
-        public void ShowInformation() => Console.WriteLine("Student: { " + this.ToString() + " }");
+        public virtual String GetInformation() => "Student: { " + "Name = " + Name 
+            + ", Faculty = " + Faculty + ", Course = " + Course + ", Department = " + StudentDepartment + " }";
+
+        public double GetGPA() => GPA;
     }
 }
